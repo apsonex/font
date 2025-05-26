@@ -3,14 +3,11 @@
 A simple PHP package to manage and search fonts from multiple providers.
 Currently supports the **Bunny Fonts** provider with an easy way to list, search, and filter fonts.
 
----
-
 ## Features
 - List fonts with pagination
 - Search fonts by keyword
 - Find fonts by key(s), family(ies), and type
 - Extensible with multiple font providers
----
 
 ## Installation
 
