@@ -3,7 +3,7 @@
 use Apsonex\Font\Providers\BunnyProvider;
 
 test('findByFamily is case-insensitive', function () {
-    $provider = new BunnyProvider();
+    $provider = new BunnyProvider;
     $response1 = $provider->findByFamily('Abel');
     $response2 = $provider->findByFamily('abel');
 
@@ -11,7 +11,7 @@ test('findByFamily is case-insensitive', function () {
 });
 
 test('findByType is case-insensitive', function () {
-    $provider = new BunnyProvider();
+    $provider = new BunnyProvider;
     $response1 = $provider->findByType('Sans-Serif');
     $response2 = $provider->findByType('sans-serif');
 

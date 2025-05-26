@@ -2,8 +2,8 @@
 
 namespace Apsonex\Font;
 
-use Apsonex\Font\Providers\BunnyProvider;
 use Apsonex\Font\Contracts\FontProviderInterface;
+use Apsonex\Font\Providers\BunnyProvider;
 
 class Font
 {
@@ -11,18 +11,20 @@ class Font
 
     public static function make(): static
     {
-        return new static();
+        return new static;
     }
 
     public function bunny(): static
     {
-        $this->provider = new BunnyProvider();
+        $this->provider = new BunnyProvider;
+
         return $this;
     }
 
     public function useProvider(FontProviderInterface $provider): static
     {
         $this->provider = $provider;
+
         return $this;
     }
 

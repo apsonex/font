@@ -1,11 +1,11 @@
 <?php
 
-use Apsonex\Font\Providers\BunnyProvider;
 use Apsonex\Font\FontDTO;
 use Apsonex\Font\FontResponse;
+use Apsonex\Font\Providers\BunnyProvider;
 
 beforeEach(function () {
-    $this->provider = new BunnyProvider();
+    $this->provider = new BunnyProvider;
 });
 
 test('bunny provider lists fonts', function () {

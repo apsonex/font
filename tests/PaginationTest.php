@@ -3,7 +3,7 @@
 use Apsonex\Font\Providers\BunnyProvider;
 
 test('pagination skips records correctly', function () {
-    $provider = new BunnyProvider();
+    $provider = new BunnyProvider;
 
     $page1 = $provider->list(limit: 1, page: 1);
     $page2 = $provider->list(limit: 1, page: 2);
@@ -12,7 +12,7 @@ test('pagination skips records correctly', function () {
 });
 
 test('list handles invalid pagination inputs gracefully', function () {
-    $provider = new BunnyProvider();
+    $provider = new BunnyProvider;
 
     $response = $provider->list(limit: -5, page: -2);
 

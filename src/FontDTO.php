@@ -7,11 +7,11 @@ namespace Apsonex\Font;
  *
  * A Data Transfer Object representing a single font in normalized format.
  *
- * @property string $key        Unique lowercase key (e.g., 'abeezee')
- * @property string $provider   Font provider name (e.g., 'bunny')
- * @property string $category   Font category (e.g., 'sans-serif')
- * @property string $family     Font family name (e.g., 'ABeeZee')
- * @property string $urlString  Font identifier for CSS usage (e.g., 'abeezee:400,400i')
+ * @property string $key Unique lowercase key (e.g., 'abeezee')
+ * @property string $provider Font provider name (e.g., 'bunny')
+ * @property string $category Font category (e.g., 'sans-serif')
+ * @property string $family Font family name (e.g., 'ABeeZee')
+ * @property string $urlString Font identifier for CSS usage (e.g., 'abeezee:400,400i')
  *
  * Example:
  * ```
@@ -29,9 +29,13 @@ namespace Apsonex\Font;
 class FontDTO
 {
     public string $key;
+
     public string $provider;
+
     public string $category;
+
     public string $family;
+
     public string $urlString;
 
     public function __construct(array $data)
