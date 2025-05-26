@@ -74,6 +74,36 @@ $response = $fontManager->findByType('sans-serif', limit: -1);
 - family (string): Font family name
 - urlString (string): CSS font string identifier
 
+The `FontDTO` class represents a single font item with key metadata used across the package.
+
+| Property    | Type   | Description                                     | Example              |
+| ----------- | ------ | ----------------------------------------------- | -------------------- |
+| `key`       | string | Unique identifier for the font                  | `"abeezee"`          |
+| `provider`  | string | The font provider source                        | `"bunny"`            |
+| `category`  | string | Font category/type (e.g., serif, sans-serif)    | `"sans-serif"`       |
+| `family`    | string | The font family name                            | `"ABeeZee"`          |
+| `urlString` | string | A URL-friendly CSS font string used for loading | `"abeezee:400,400i"` |
+
+```php
+use Apsonex\Font\FontDTO;
+
+// Creating a FontDTO object (usually returned from provider methods)
+$font = new FontDTO(
+    key: 'abeezee',
+    provider: 'bunny',
+    category: 'sans-serif',
+    family: 'ABeeZee',
+    urlString: 'abeezee:400,400i'
+);
+
+// Accessing properties
+echo "Font Key: " . $font->key . PHP_EOL;             // Output: abeezee
+echo "Provider: " . $font->provider . PHP_EOL;        // Output: bunny
+echo "Category: " . $font->category . PHP_EOL;        // Output: sans-serif
+echo "Family: " . $font->family . PHP_EOL;            // Output: ABeeZee
+echo "CSS URL String: " . $font->urlString . PHP_EOL; // Output: abeezee:400,400i
+```
+
 ## FontResponse `(Apsonex\Font\FontResponse)`
 - Paginated font response containing:
 - fonts (array of FontDTO)
